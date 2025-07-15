@@ -1,0 +1,6 @@
+.venv/
+**/.venv/
+*.so
+*.pt
+*.pth
+*.pkl
