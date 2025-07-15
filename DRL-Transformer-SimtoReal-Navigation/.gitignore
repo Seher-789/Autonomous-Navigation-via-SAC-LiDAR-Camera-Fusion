@@ -1,0 +1,7 @@
+catkin_ws/src/gtrl/scripts/SAC/.venv
+.venv/
+**/.venv/
+*.so
+*.pt
+*.pth
+*.pkl

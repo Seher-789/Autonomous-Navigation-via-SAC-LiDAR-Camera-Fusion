@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="scout">
+
+  <!-- Import Rviz colors -->
+  <xacro:include filename="$(find gtrl)/xacro/bringup/materials.xacro"/>
+
+  <!-- Scout Mini Robot -->
+  <xacro:include filename="$(find gtrl)/xacro/robot/scout/scout_mini.xacro"/>
+
+  <!-- Velodyne VLP-16 Lidar (Lower Position) -->
+  <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+  <xacro:VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="360" gpu="false" min_angle="-1.57" max_angle="1.57" min_range="0.1">
+    <!-- Lowered the Z position to 0.1 -->
+    <origin xyz="0.125 0 0.1" rpy="0 0 0"/>
+  </xacro:VLP-16>
+
+  <!-- Hokuyo Laser -->
+  <xacro:include filename="$(find gtrl)/xacro/laser/hokuyo.xacro"/>
+  <xacro:laser name="front_laser" parent="base_link" xyz="0.125 0 0.1" rpy="0 0 0" meshes="package://gtrl/meshes/laser"/>
+
+  <!-- Depth Camera -->
+  <xacro:include filename="$(find gtrl)/xacro/camera/cameraD.xacro"/>
+  <xacro:camD name="cameraD" parent="base_link" xyz="0.21 0 0.075" rpy="0 0 0"/>
+
+  <!-- FishEye Camera (First RGB camera) -->
+  <xacro:include filename="$(find gtrl)/xacro/camera/cameraFisheye.xacro"/>
+  <xacro:camF name="cameraFishEye" parent="base_link" xyz="0.21 0 0.5" rpy="0 0 0"/>
+ <!-- for fusion Additional camera need -->
+  <!-- Second RGB Camera (Additional) -->
+  <xacro:include filename="$(find gtrl)/xacro/camera/cameraRGB.xacro"/>
+  <xacro:cam name="cameraRGB" parent="base_link" xyz="0.21 0 0.3" rpy="0 0 0"/>
+
+</robot>
+

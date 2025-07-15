@@ -1,0 +1,2 @@
+gtrl
+-DPYTHON_EXECUTABLE=/usr/bin/python3 -DCATKIN_DEVEL_PREFIX=/home/seher/Project/src/DRL-Transformer-SimtoReal-Navigation/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/seher/Project/src/DRL-Transformer-SimtoReal-Navigation/catkin_ws/install -G Unix Makefiles

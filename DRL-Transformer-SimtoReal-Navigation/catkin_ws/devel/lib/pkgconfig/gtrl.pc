@@ -1,0 +1,8 @@
+prefix=/home/seher/Project/src/DRL-Transformer-SimtoReal-Navigation/catkin_ws/devel
+
+Name: gtrl
+Description: Description of gtrl
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
