@@ -3,6 +3,9 @@
 This project implements a deep reinforcement learning (DRL) pipeline for **autonomous robot navigation** in simulation, using **LiDAR-Camera sensor fusion** as the primary perception method. It utilizes the **Soft Actor-Critic (SAC)** algorithm enhanced with vision and point cloud data for real-time decision-making.
 
 ---
+<img width="1706" height="962" alt="sac_sf_all" src="https://github.com/user-attachments/assets/50c1f03d-cdad-4908-a4a3-b68f8c819473" />
+
+
 
 ## Key Features
 
